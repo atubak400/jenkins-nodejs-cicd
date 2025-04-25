@@ -32,15 +32,15 @@ pipeline {
       }
     }
 
-    stage('Docker Build & Push') {
-        steps {
-            script {
-                dockerImage = docker.build("power3425/jenkins-nodejs-cicd")
-                docker.withRegistry('https://index.docker.io/v1/', 'dockerhub') {
-                dockerImage.push()
-                }
-            }
-        }
-    }
+    // stage('Docker Build & Push') {
+    //     steps {
+    //         script {
+    //             dockerImage = docker.build("power3425/jenkins-nodejs-cicd")
+    //             docker.withRegistry('https://index.docker.io/v1/', 'dockerhub') {
+    //             dockerImage.push()
+    //             }
+    //         }
+    //     }
+    // }
   }
 }
