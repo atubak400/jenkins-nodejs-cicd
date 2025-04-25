@@ -18,7 +18,7 @@ This project demonstrates a complete CI/CD pipeline setup using **Jenkins** for 
 
 - Region: us-east-1 (N. Virginia)
 - AMI: Ubuntu 24.04
-- Instance type: t2.micro (Free Tier)
+- Instance type: t2.micro
 - Key pair: `jenkins-key.pem`
 - Security group (open these ports):
   - SSH (TCP 22, source: 0.0.0.0/0)
