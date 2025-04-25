@@ -3,9 +3,9 @@ pipeline {
 
   stages {
     stage('Clone Code') {
-      steps {
-        git 'https://github.com/atubak400/jenkins-nodejs-cicd'
-      }
+        steps {
+            git branch: 'main', url: 'https://github.com/atubak400/jenkins-nodejs-cicd'
+        }
     }
 
     stage('Install Dependencies') {
