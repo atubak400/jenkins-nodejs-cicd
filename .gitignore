@@ -1,2 +1,3 @@
 node_modules/
-.gitignorejenkins-key.pem
+.gitignore
+jenkins-key.pem
