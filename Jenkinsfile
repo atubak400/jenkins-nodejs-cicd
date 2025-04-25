@@ -31,5 +31,16 @@ pipeline {
         sh 'nohup node index.js > output.log 2>&1 &'
       }
     }
+
+    stage('Docker Build & Push') {
+        steps {
+            script {
+                dockerImage = docker.build("power3425/jenkins-nodejs-cicd")
+                docker.withRegistry('https://index.docker.io/v1/', 'dockerhub') {
+                dockerImage.push()
+                }
+            }
+        }
+    }
   }
 }
